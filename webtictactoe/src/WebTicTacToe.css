@@ -1,0 +1,128 @@
+.ttt-outer {
+  min-height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(40,60,80,0.09);
+  padding: 40px 32px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 360px;
+}
+
+.ttt-title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #4caf50;
+  text-align: center;
+}
+
+.ttt-status {
+  font-size: 1rem;
+  color: #2196f3;
+  margin-bottom: 18px;
+  font-weight: 500;
+  min-height: 1.3em;
+  text-align: center;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ttt-board-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ttt-square {
+  width: 64px;
+  height: 64px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: #f6f6f9;
+  border: 1.5px solid #dbe8ee;
+  border-radius: 10px;
+  color: #999;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(30,90,175,0.07);
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding: 0;
+}
+
+.ttt-square:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.ttt-x {
+  color: #4caf50;
+}
+
+.ttt-o {
+  color: #2196f3;
+}
+
+.ttt-square-highlight {
+  background: #fffbe0;
+  border-color: #ffc107;
+}
+
+.ttt-btn {
+  margin-top: 24px;
+  margin-bottom: 2px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ffc107;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(33, 150, 243, 0.07);
+  transition: background 0.15s;
+}
+
+.ttt-btn:hover {
+  background: #ffe066;
+}
+
+.ttt-legend {
+  margin-top: 16px;
+  color: #aaa;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 480px) {
+  .ttt-container {
+    padding: 25px 4vw 16px;
+    min-width: unset;
+    max-width: 96vw;
+  }
+  .ttt-board-row, .ttt-board {
+    gap: 7px;
+  }
+  .ttt-square {
+    width: 46px;
+    height: 46px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+  }
+}
